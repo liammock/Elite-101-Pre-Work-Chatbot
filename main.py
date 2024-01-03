@@ -52,23 +52,23 @@ def list_of_options(talking):
   print("3. Option 3")
   print("4. Option 4")
   print("5. Exit\n")
-  try:
-    selection = int(input("Please select an option: "))
-    if selection == 5:
-      exit(talking)
-    elif selection == 1:
-      option_one()
-    elif selection == 2:
-      option_two()
-    elif selection == 3:
-      option_three()
-    elif selection == 4:
-      option_four()
-    else:
+  while talking == True:
+    try:
+      selection = int(input("Please select an option: "))
+      if selection == 5:
+        talking = exit(talking)
+      elif selection == 1:
+        option_one()
+      elif selection == 2:
+        option_two()
+      elif selection == 3:
+        option_three()
+      elif selection == 4:
+        option_four()
+      else:
+        print("\nI didn't understand that. Please try again.\n")
+    except ValueError:
       print("\nI didn't understand that. Please try again.\n")
-  except ValueError:
-    print("\nI didn't understand that. Please try again.\n")
-
 
 def chatbot():
   talking = True
@@ -77,6 +77,5 @@ def chatbot():
   print(f"\nWhat can I help you with, {name}?\n")
   while talking == True:
     talking = list_of_options(talking)
-
 
 chatbot()
