@@ -1,7 +1,6 @@
 def unfinished():
   print("Currently unfinished, this is a placeholder.")
 
-
 def age_finder():
   number_is_correct = True
   while number_is_correct == True:
@@ -23,28 +22,22 @@ def age_finder():
     except ValueError:
       print("Invalid input. Please enter a valid age.")
 
-
 def option_one():
   unfinished()
-
 
 def option_two():
   unfinished()
 
-
 def option_three():
   unfinished()
 
-
 def option_four():
   unfinished()
-
 
 def exit(talking):
   print("Goodbye, see you soon!")
   talking = False
   return talking
-
 
 def list_of_options(talking):
   print("1. Option 1")
