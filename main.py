@@ -6,7 +6,7 @@ def age_finder():
   while number_is_correct == True:
     try:
       age = int(input("What is your age? "))
-      if age >= 1 or range(1, 29):
+      if age <= 1 or range(1, 29):
         print("Young and fresh!")
       elif age in range(30, 59):
         print("Same age as my younger brother!")
